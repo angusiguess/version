@@ -151,7 +151,7 @@ class Rake::VersionTask < Rake::TaskLib
     if self.with_git
       `git add #{self.filename}`
       `git add #{self.gemspec}` if self.with_gemspec
-      `git commit -m "Version bump to #{version}"`
+      `git commit -m "Version bump to #{version} [ci skip]"`
       `git tag #{version}` if self.with_git_tag
     end
 
